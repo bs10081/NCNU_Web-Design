@@ -99,6 +99,23 @@
             cursor: pointer;
             font-size: 16px;
         }
+
+        #querySelector {
+            padding: 10px;
+            font-size: 16px;
+            border-radius: 5px;
+            border: 1px solid #ccc;
+            background-color: #fff;
+            color: #333;
+        }
+
+        fieldset {
+            border: 2px solid #ccc;
+            border-radius: 5px;
+            padding: 10px;
+            margin-bottom: 20px;
+            font-size: 16px;
+        }
     </style>
 </head>
 
@@ -148,33 +165,51 @@
             值得加強保育並提供生態教育及旅遊的寶貴溼地。區內的蜻蜓流籠、青蛙簡報室、嚇一跳橋等休憩設施，是遊客的最愛。</p>
         <img src="https://tfbs.site/6e7s.jpg" alt="草湳溼地" title="草湳溼地" width="300">
 
-        <hr>
-        <h4>
-            評論
-        </h4>
-
+        <br><br><br>
         <div>
-            <form action="https://ycchen.im.ncnu.edu.tw/join.php" method="POST">
-                <label for="name">姓名：</label>
-                <input type="text" id="name" name="name"><br><br>
+            <fieldset>
+                <legend>留言板</legend>
+                <form action="https://ycchen.im.ncnu.edu.tw/join.php" method="POST">
+                    <label for="name">姓名：</label>
+                    <input type="text" id="name" name="name"><br><br>
 
-                <label for="email">Email：</label>
-                <input type="email" id="email" name="email"><br><br>
+                    <label for="querySelector">性別：</label><br>
+                    <select id="querySelector" name="querySelector">
+                        <option value="male">男</option>
+                        <option value="female">女</option>
+                        <option value="Walmart's shopping bag">沃爾瑪的購物袋</option>
+                        <option value="none">不告訴你</option>
+                        <option value="共咩啊">我不知道</option>
+                    </select><br><br>
+                    <label for="email">Email：</label>
+                    <input type="email" id="email" name="email"><br><br>
 
-                <label for="message">留言：</label>
-                <textarea id="message" name="message"></textarea><br><br>
-                <label>
-                    <input type="checkbox" name="privacy_policy" required> 我已閱讀並同意<a
-                        href="https://tfbs.site/N7Ya6Z8mjKTnByhFDWXytHS5.html" style="color
+                    <label for="message">留言：</label>
+                    <textarea id="message" name="message"></textarea><br><br>
+
+                    <label>
+                        <input type="checkbox" name="privacy_policy" required> 我已閱讀並同意<a
+                            href="https://tfbs.site/N7Ya6Z8mjKTnByhFDWXytHS5.html" style="color
                         : wheat; text-decoration: underline;" target="_blank">隱私權政策</a>
-                </label>
-                <br>
-                <br>
-                <input type="submit" value="提交">
-            </form>
-
+                    </label>
+                    <br>
+                    <br>
+                    <input type="submit" value="提交">
+                </form>
+                <br><br>
+            </fieldset>
         </div>
-        <hr>
+
+        <!-- <h4>
+            檔案上傳
+        </h4> -->
+
+        <!-- <form action="https://tfbs.site/" method="post" enctype="multipart/form-data">
+            <label for="file">選擇檔案：</label>
+            <input type="file" id="file" name="file"><br><br>
+            <input type="submit" value="上傳">
+        </form> -->
+
         <div style="font-size: 8pt; text-align: center;">
             本網站資料為新故鄉文教基金會版權所有 若需引用請註明出處<br>
             TEL：049-2422003 &nbsp;&nbsp; FAX：049-2422018 &nbsp;&nbsp; E-mail：<a href="mailto:land@homeland.org.tw."
