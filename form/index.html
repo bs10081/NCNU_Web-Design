@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="zh-Hant-TW">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="keywords" content=" " />
+    <meta name="description" content=" " />
+    <title>Form</title>
+
+    <!-- 美化表單的 CSS -->
+    <style>
+        /* 套用全域樣式 */
+        body {
+            font-family: Helvetica, Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #eee;
+        }
+
+        /* 設定表單外框 */
+        .container {
+            margin: 50px auto;
+            max-width: 800px;
+            background-color: #fff;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+            padding: 30px;
+            border-radius: 10px;
+        }
+
+        /* 設定標題樣式 */
+        h1 {
+            text-align: center;
+            margin-bottom: 30px;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            color: #333;
+        }
+
+        /* 設定輸入框樣式 */
+        form input[type="text"],
+        form input[type="password"],
+        form input[type="email"],
+        form input[type="date"],
+        form select {
+            width: 100%;
+            padding: 12px 20px;
+            margin: 8px 0;
+            border: none;
+            border-radius: 4px;
+            box-sizing: border-box;
+            background-color: #f1f1f1;
+        }
+
+        /* 設定勾選框樣式 */
+        form input[type="checkbox"],
+        form input[type="radio"] {
+            margin-right: 10px;
+        }
+
+        /* 設定勾選框勾選後的樣式 */
+        form input[type="checkbox"]:checked:before,
+        form input[type="radio"]:checked:before {
+            content: "\2714";
+            position: absolute;
+            font-size: 30px;
+            color: #4CAF50;
+            top: 0;
+            left: 0;
+        }
+
+        /* 設定勾選框未勾選的樣式 */
+        form input[type="checkbox"]:before,
+        form input[type="radio"]:before {
+            content: "\2714";
+            position: absolute;
+            font-size: 30px;
+            color: #eee;
+            top: 0;
+            left: 0;
+        }
+
+        /* 設定上傳檔案的樣式 */
+        form input[type="file"] {
+            margin-top: 10px;
+        }
+
+        /* 設定送出按鈕及重設按鈕的樣式 */
+        form input[type="submit"],
+        form input[type="reset"] {
+            background-color: #4CAF50;
+            color: white;
+            padding: 12px 20px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            margin-top: 20px;
+            margin-bottom: 10px;
+        }
+
+        /* 設定滑鼠移至按鈕的樣式 */
+        form input[type="submit"]:hover,
+        form input[type="reset"]:hover {
+            background-color: #3e8e41;
+        }
+
+        /* 設定必填欄位勾選後的樣式 */
+        form input[type="checkbox"][required]:before {
+            content: "\2611";
+            position: absolute;
+            font-size: 30px;
+            color: #4CAF50;
+            top: 0;
+            left: 0;
+        }
+
+        /* 設定空白欄位的預設文字樣式 */
+        ::-webkit-input-placeholder {
+            color: #aaa;
+        }
+
+        :-ms-input-placeholder {
+            color: #aaa;
+        }
+
+        ::placeholder {
+            color: #aaa;
+        }
+
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <h1>Reg's Form</h1>
+        <form method="get" action="https://ycchen.im.ncnu.edu.tw/join.php" enctype="multipart/form-data">
+            <!-- Data -->
+            <!-- 使用 label 把文字置於文字框上方 -->
+            <label for="userID">User Name:</label>
+            <input type="text" name="userID" id="userID" placeholder="Your ID" value="RegChien" required>
+
+            <br><br>
+
+            <label for="pwd">Password:</label>
+            <input type="password" name="pwd" id="pwd" size="10" maxlength="18" required>
+
+            <!-- Email -->
+            <br><br>
+            <label for="email">Email:</label>
+            <input type="email" name="email" id="email" required>
+
+            <!-- Photos -->
+            <br><br>
+            <label for="photo">Photos:</label>
+            <input type="file" name="photo" id="photo">
+
+            <!-- Checkbox -->
+            <br><br>
+            <fieldset>
+                <legend>Members:</legend>
+                <input type="checkbox" name="mbrs[]" value="Google" checked>
+                <label for="google">Google</label>
+
+                <input type="checkbox" name="mbrs[]" value="Facebook">
+                <label for="facebook">Facebook</label>
+
+                <input type="checkbox" name="mbrs[]" value="Twitter" checked>
+                <label for="twitter">Twitter</label>
+            </fieldset>
+
+            <!-- Gender -->
+            <br><br>
+            <fieldset>
+                <legend>Gender:</legend>
+                <input type="radio" name="gender" value="Male" id="male">
+                <label for="male">Male</label>
+
+                <input type="radio" name="gender" value="Female" id="female">
+                <label for="female">Female</label>
+            </fieldset>
+
+            <!-- Birthday -->
+            <br><br>
+            <label for="date">Birthday:</label>
+            <input type="date" name="date" id="date">
+
+            <!-- Birth Year -->
+            <br><br>
+            <label for="birthdayYear">Birth Year:</label>
+            <select name="birthdayYear" id="birthdayYear">
+                <option>2000</option>
+                <option>2001</option>
+                <option>2002</option>
+                <option>2003</option>
+            </select>
+
+            <!-- submit -->
+            <br><br>
+            <input type="checkbox" name="check" id="check" value="checked" required>
+            <label for="check">Check</label>
+
+            <br><br>
+            <input type="submit">
+            <input type="reset">
+        </form>
+    </div>
+</body>
+
+</html>
