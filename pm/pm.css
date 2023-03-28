@@ -1,0 +1,95 @@
+body {
+background-color:#120;
+}
+td {text-align: right}
+td+td {text-align:left; padding-left:10px}
+table {width: 300px}
+h1 {
+font-size: 30px;
+color: greenYellow;
+}
+h2 {
+background-image: url(h-bg.jpg);
+background-repeat: repeat-y;
+padding:5px 0px 3px 10px;
+border-left:5px double darkGreen;
+border-bottom: 1px solid black;
+font-size: 18pt;
+letter-spacing: 4pt;
+}
+#container {
+width: 900px;
+margin: 20px auto;
+border: 1px solid #ccc;
+position:relative;
+background-color:#efc;
+}
+#banner {
+color:ivory;
+background-color:darkOliveGreen;
+padding:20px;
+margin: 20px;
+}
+#content {
+padding: 20px;
+background-color: aliceBlue;
+margin: 20px;
+border: 1px solid #ccc;
+width: 670px;
+line-height: 28px;
+}
+p {text-indent: 2pc;
+text-align:justify;
+font-size: 12pt;
+}
+#menu {
+position: absolute;
+right: 20px;
+top:390px;
+}
+#preface {}
+#actors {}
+#story {}
+#style {}
+img {
+border: 2px solid white;
+border-color: white #666 #666 white;
+background-color:ivory;
+padding:10px;
+margin: 10px 0px;
+}
+.right {
+float: right;
+margin: 0px 0px 15px 15px;
+width:250px;
+padding: 10px;
+}
+.left {
+float: left;
+margin: 0px 15px 15px 0px;
+width:250px;
+padding:10px;
+}
+
+a {text-decoration:none;
+color: white;
+}
+ul {
+list-style-type: none;
+}
+li {
+line-height: 45px
+}
+li a {
+display:block;
+width: 125px;
+background-image: url(btn1-1.png);
+background-repeat: no-repeat;
+background-position: center;
+text-indent: 10px;
+}
+li a:hover {
+background-image: url(btn1-2.png);
+color: gold;
+font-weight: bold;
+}
