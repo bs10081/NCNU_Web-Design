@@ -1,3 +1,4 @@
+/* 背景設定 */
 body {
     background: url('https://images.unsplash.com/photo-1626775238053-4315516eedc9?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2073&q=80') no-repeat center center fixed;
     -webkit-background-size: cover;
@@ -7,22 +8,26 @@ body {
     font-family: 'Helvetica', 'Arial', sans-serif;
 }
 
+/* 內容區域設定 */
 #content {
     font-size: 36pt;
     font-weight: bolder;
     color: #4A6FA5;
     text-align: center;
     background-color: rgba(255, 255, 255, 0.9);
+    /* 白色半透明背景 */
     border-radius: 15px;
     padding: 20px;
     overflow: auto;
     position: fixed;
+    /* 固定在視窗內 */
     top: 0;
     right: 0;
     bottom: 0;
     left: 0;
 }
 
+/* 卡片區域設定 */
 #canvas {
     padding: 50px;
     width: 500px;
@@ -30,6 +35,7 @@ body {
     margin: 10px auto;
 }
 
+/* 卡片設定 */
 img {
     margin: 10px;
     vertical-align: top;
@@ -46,6 +52,7 @@ img:hover {
     padding-top: 5px;
 }
 
+/* 按鈕設定 */
 button {
     font-size: 20px;
     padding: 10px 20px;
@@ -65,16 +72,19 @@ button:active {
     background-color: #2E4D74;
 }
 
+/* 標題設定 */
 h1 {
     font-family: 'Helvetica', 'Arial', sans-serif;
 }
 
+/* 頁尾設定 */
 footer {
     text-align: center;
     padding: 20px 0;
     font-size: 14px;
 }
 
+/* 發牌動畫設定 */
 @keyframes deal {
     0% {
         transform: translateY(-500px) rotate(-180deg);
@@ -91,6 +101,7 @@ img.dealing {
     animation: deal 0.5s ease-in-out;
 }
 
+/* 粒子效果設定 */
 @keyframes particle {
     0% {
         transform: scale(1);
@@ -129,6 +140,7 @@ img.dealing {
     transform: translate(-50%, -50%) scale(0);
 }
 
+/* 卡片翻轉設定 */
 .flip {
     transform: rotateY(180deg);
 }
