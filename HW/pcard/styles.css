@@ -1,0 +1,134 @@
+body {
+    background: url('https://images.unsplash.com/photo-1626775238053-4315516eedc9?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2073&q=80') no-repeat center center fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    font-family: 'Helvetica', 'Arial', sans-serif;
+}
+
+#content {
+    font-size: 36pt;
+    font-weight: bolder;
+    color: #4A6FA5;
+    text-align: center;
+    background-color: rgba(255, 255, 255, 0.9);
+    border-radius: 15px;
+    padding: 20px;
+    overflow: auto;
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+}
+
+#canvas {
+    padding: 50px;
+    width: 500px;
+    height: 150px;
+    margin: 10px auto;
+}
+
+img {
+    margin: 10px;
+    vertical-align: top;
+    transition: padding-top 0.3s;
+    border: 1px solid #4A6FA5;
+    border-radius: 5px;
+    box-shadow: 8px 8px 16px 0 rgba(0, 0, 0, 0.2), -8px -8px 16px 0 rgba(255, 255, 255, 0.5);
+    transform-style: preserve-3d;
+    transition: transform 0.5s;
+    backface-visibility: hidden;
+}
+
+img:hover {
+    padding-top: 5px;
+}
+
+button {
+    font-size: 20px;
+    padding: 10px 20px;
+    margin: 20px 0;
+    border: none;
+    border-radius: 5px;
+    background-color: #4A6FA5;
+    color: white;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: #5682C2;
+}
+
+button:active {
+    background-color: #2E4D74;
+}
+
+h1 {
+    font-family: 'Helvetica', 'Arial', sans-serif;
+}
+
+footer {
+    text-align: center;
+    padding: 20px 0;
+    font-size: 14px;
+}
+
+@keyframes deal {
+    0% {
+        transform: translateY(-500px) rotate(-180deg);
+        opacity: 0;
+    }
+
+    100% {
+        transform: translateY(0) rotate(0deg);
+        opacity: 1;
+    }
+}
+
+img.dealing {
+    animation: deal 0.5s ease-in-out;
+}
+
+@keyframes particle {
+    0% {
+        transform: scale(1);
+        opacity: 1;
+    }
+
+    100% {
+        transform: scale(0);
+        opacity: 0;
+    }
+}
+
+.card {
+    position: relative;
+}
+
+.card::before,
+.card::after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 4px;
+    height: 4px;
+    border-radius: 50%;
+    background-color: #ff0000;
+    opacity: 0;
+    animation: particle 0.5s linear both;
+}
+
+.card::before {
+    transform: translate(-50%, -50%) scale(0);
+}
+
+.card::after {
+    transform: translate(-50%, -50%) scale(0);
+}
+
+.flip {
+    transform: rotateY(180deg);
+}
