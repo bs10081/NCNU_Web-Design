@@ -91,9 +91,13 @@ function showResult(isWin) {
     resultContainer.style.transform = 'translate(-50%, -50%)';
 
     if (isWin) {
+        const failText = document.createElement('p');
+        failText.textContent = 'Winer Winer Chicken Dinner';
+        failText.style.textAlign = 'center';
+        resultContainer.appendChild(failText);
         // 若為勝利，創建圖片元素
         const resultImage = document.createElement('img');
-        resultImage.src = 'win-image.png';
+        resultImage.src = 'image/win-image.png';
         resultImage.style.width = '300px';
         resultImage.style.display = 'block';
         resultImage.style.margin = '0 auto';
@@ -109,6 +113,13 @@ function showResult(isWin) {
         failText.textContent = 'You are loser';
         failText.style.textAlign = 'center';
         resultContainer.appendChild(failText);
+
+        const failImage = document.createElement('img');
+        failImage.src = 'image/loser-image.png';
+        failImage.style.width = '300px';
+        failImage.style.display = 'block';
+        failImage.style.margin = '0 auto';
+        resultContainer.appendChild(failImage);
 
     }
 
