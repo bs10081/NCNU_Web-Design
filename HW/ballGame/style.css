@@ -1,0 +1,68 @@
+body {
+    font-family: 'Helvetica', 'Arial', sans-serif;
+    background-color: #e0e5ec;
+    padding: 20px;
+    text-align: center;
+}
+
+h1 {
+    color: #333;
+}
+
+form {
+    margin-bottom: 20px;
+    background: #e0e5ec;
+    border-radius: 15px;
+    box-shadow: 20px 20px 60px #bec3c9,
+        -20px -20px 60px #ffffff;
+}
+
+#game-area {
+    position: relative;
+    width: 1000px;
+    height: 500px;
+    margin: 20px auto;
+    background: #e0e5ec;
+    border-radius: 15px;
+    box-shadow: 20px 20px 60px #bec3c9,
+        -20px -20px 60px #ffffff;
+}
+
+.ball {
+    position: absolute;
+    background-color: #e0e5ec;
+    border-radius: 50%;
+    cursor: pointer;
+    box-shadow: 5px 5px 15px #bec3c9,
+        -5px -5px 15px #ffffff;
+}
+
+button {
+    padding: 10px 20px;
+    font-size: 16px;
+    margin-top: 10px;
+    background: #e0e5ec;
+    border-radius: 15px;
+    box-shadow: 5px 5px 15px #bec3c9,
+        -5px -5px 15px #ffffff;
+}
+
+#start-button:disabled {
+    background-color: #ccc;
+    cursor: not-allowed;
+}
+
+p {
+    font-size: 18px;
+    color: #333;
+}
+
+select {
+    padding: 10px 20px;
+    font-size: 16px;
+    margin-top: 10px;
+    background: #e0e5ec;
+    border-radius: 15px;
+    box-shadow: 5px 5px 15px #bec3c9,
+        -5px -5px 15px #ffffff;
+}
