@@ -47,6 +47,11 @@ h1 {
     border-radius: 50%;
     cursor: pointer;
     box-shadow: 5px 5px 15px #bec3c9, -5px -5px 15px #ffffff;
+    transition: box-shadow 150ms ease-out;
+}
+
+.ball:active {
+    box-shadow: inset 3px 3px 10px #bec3c9, inset -3px -3px 10px #ffffff;
 }
 
 button,
@@ -57,17 +62,32 @@ select {
     background: #e0e5ec;
     border-radius: 15px;
     box-shadow: 5px 5px 15px #bec3c9, -5px -5px 15px #ffffff;
+    transition: box-shadow 150ms ease-out;
+}
+
+button:active,
+select:active {
+    box-shadow: inset 3px 3px 10px #bec3c9, inset -3px -3px 10px #ffffff;
 }
 
 #start-button:disabled {
-    background-color: #ccc;
-    cursor: not-allowed;
+    box-shadow: inset 3px 3px 10px #bec3c9, inset -3px -3px 10px #ffffff;
 }
 
 #timer,
-#score {
+#score,
+#level {
     background: #e0e5ec;
     padding: 10px 20px;
     border-radius: 15px;
     box-shadow: 5px 5px 15px #bec3c9, -5px -5px 15px #ffffff;
 }
+
+.hidden {
+    display: none;
+}
+
+/* .img-neumorphism {
+    border-radius: 15px;
+    box-shadow: 5px 5px 15px #bec3c9, -5px -5px 15px #ffffff;
+} */

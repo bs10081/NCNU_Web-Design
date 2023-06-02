@@ -45,11 +45,10 @@ function startGame() {
 
   // 重置得分和等級
   score = 0;
-  level = '';
+  // levelElement.textContent = '';  // clear level text
 
   // 顯示初始得分和等級
   scoreElement.textContent = '得分: 0';
-  levelElement.textContent = '';
 
   // 更新剩餘時間顯示
   timerElement.textContent = `剩餘時間: ${gameDuration}秒`;
@@ -66,6 +65,7 @@ function startGame() {
   // 設定延遲後顯示球
   window.setTimeout(showBall, delay, difficulty);
 }
+
 
 function startTimer() {
   let remainingTime = gameDuration;
@@ -86,6 +86,12 @@ function startTimer() {
 }
 
 function handleBallClick() {
+  // Add animation
+  this.style.transform = "scale(0.95)";
+  setTimeout(() => {
+    this.style.transform = "scale(1)";
+  }, 100);
+
   // 移除球元素
   gameArea.removeChild(this);
 
@@ -98,6 +104,7 @@ function handleBallClick() {
     showBallAgain();
   }
 }
+
 
 function showBallAgain() {
   // 獲取選擇的難易度
@@ -155,16 +162,6 @@ function removeBall(ball) {
   }
 }
 
-// function showResult() {
-//   // 清空遊戲區域
-//   gameArea.innerHTML = '';
-
-//   // 將文字訊息元素添加到結果容器
-//   levelElement.textContent = `等級: ${getLevel()}`;
-
-//   // 重新顯示開始按鈕
-//   startButton.disabled = false;
-// }
 function showResult() {
   // 清空遊戲區域
   gameArea.innerHTML = '';
@@ -175,11 +172,11 @@ function showResult() {
   // 根據等級選擇圖片
   let imageSrc = '';
   if (level === '優') {
-    imageSrc = 'image/high.jpg';
+    imageSrc = 'image/high.png';
   } else if (level === '中') {
-    imageSrc = 'image/mid.jpg';
+    imageSrc = 'image/mid.png';
   } else {
-    imageSrc = 'image/low.jpg';
+    imageSrc = 'image/low.png';
   }
 
   // 建立圖片元素
@@ -189,8 +186,12 @@ function showResult() {
   // 設定圖片寬度為300像素
   imageElement.style.width = '300px';
 
+  // 添加新模拟风格样式
+  // imageElement.classList.add('img-neumorphism');
+
   // 將圖片元素添加到遊戲區域
   gameArea.appendChild(imageElement);
+
 
   // 將遊戲區域內容水平和垂直置中
   gameArea.style.display = 'flex';
